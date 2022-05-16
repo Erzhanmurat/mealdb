@@ -111,6 +111,9 @@ img {
 .center {
     text-align: center;
 }
+.player {
+    width: 120%!important;
+}
 
 
 

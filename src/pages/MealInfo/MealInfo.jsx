@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import {Link, useParams} from "react-router-dom";
+import ReactPlayer from 'react-player'
 import axios from "axios";
 
 const MealInfo = () => {
@@ -27,6 +28,7 @@ const MealInfo = () => {
         <div className="col-4">
            <h3 className="meal-desc bold">{meal.strMeal}</h3>
            <img src={meal.strMealThumb} alt={meal.strMeal}/>
+              <ReactPlayer url={meal.strYoutube} className="player"/>
         </div>
         <div className="col-6 ms">
            <h3 className="meal-desc bold">Ingredients</h3>
