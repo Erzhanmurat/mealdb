@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;900&display=swap');
 
 body {
     margin: 0;
@@ -92,7 +92,25 @@ img {
 .bold {
     font-weight: 600;
 }
-
+.alphabet {
+    display: inline-block;
+    font-size: 20px;
+    font-weight: 700;
+    color: #a46e1f;
+    text-decoration: none;
+    margin: 0 auto;
+}
+.alphabet:hover {
+    color: rgb(245, 172, 94);
+}
+.alphabet span {
+    font-weight: 900;
+    color: white;
+    padding: 0 5px;
+}
+.center {
+    text-align: center;
+}
 
 
 

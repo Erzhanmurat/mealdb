@@ -5,6 +5,8 @@ import MealInfo from "./pages/MealInfo";
 import MealIngredients from "./components/MealIngredients";
 import Browse from "./pages/Browse";
 import Footer from "./components/Footer";
+import BrowseNavigation from "./components/BrowseNavigation";
+import React from "react";
 
 
 function App() {
@@ -20,6 +22,7 @@ function App() {
                 <Route path="/browse/:name" element={<Browse />} />
              </Routes>
           </div>
+          <BrowseNavigation />
           <Footer />
        </div>
     </BrowserRouter>
