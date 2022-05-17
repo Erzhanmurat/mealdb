@@ -19,7 +19,7 @@ const Footer = () => {
               <div className="col-3">
                  <nav className="footer-link">
                     <a href="#">About</a>
-                    <a href="#">Fag</a>
+                    <a href="#">Faq</a>
                     <a href="#">Contact</a>
                  </nav>
               </div>

@@ -10,12 +10,11 @@
 }
 .btn {
     padding: 5px 12px;
-    margin-left: 15px;
     border-radius: 3px;
     color: #fff;
     line-height: 24px;
     display: inline-block;
-
+    margin-left: 35px;
 }
 .btn:hover {
     background: #c52d2f;
@@ -23,16 +22,25 @@
 .active {
 background:  #c52d2f;
 }
+.input-search {
+    display: inline-block;
+    margin-left: 35px;
+}
 .input-search--header {
     background: white;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    padding: 10px;
     color: gray;
     width: 120px;
     border-radius: 4px 4px 4px 4px;
 }
-.nav-btn li {
+
+.btn-social {
+    padding: 5px 12px;
+    border-radius: 3px;
+    color: #fff;
+    line-height: 24px;
     display: inline-block;
+    vertical-align: bottom;
 }
 .footer-container {
     padding-top: 30px;
@@ -44,7 +52,7 @@ background:  #c52d2f;
     color: white;
 }
 .footer-flag {
-    align-items: center;
+    vertical-align: bottom;
 }
 .footer-link a {
     margin-right: 15px;

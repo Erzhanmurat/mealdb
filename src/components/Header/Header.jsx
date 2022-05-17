@@ -31,15 +31,15 @@ const Header = () => {
                           <li className="btn">Forum</li>
                        </Link>
                        <Link to='/'>
-                          <li className="btn"><img src="https://www.themealdb.com/images/facebook_icon.png"
+                          <li className="btn-social"><img src="https://www.themealdb.com/images/facebook_icon.png"
                                                    alt="facebook"/></li>
                        </Link>
                        <Link to='/'>
-                          <li className="btn"><img src="https://www.themealdb.com/images/twitter_icon.png"
+                          <li className="btn-social"><img src="https://www.themealdb.com/images/twitter_icon.png"
                                                    alt="twitter"/></li>
                        </Link>
                        <Link to='/'>
-                          <li>
+                          <li className="input-search">
                              <input
                             type="text"
                             placeholder="Search"

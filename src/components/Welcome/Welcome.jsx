@@ -1,5 +1,6 @@
 import React from 'react';
 import './Welcome.css'
+import PayPal from '../../assets/images/PayPal.png'
 
 const Welcome = () => {
    return (
@@ -12,8 +13,8 @@ const Welcome = () => {
                  world.
                  We also offer a <a href="/Api">free JSON API</a> for anyone wanting to use it, with additional features
                  for subscribers.</p>
-              <a href="/https://www.paypal.com/pl/signin">
-                 <button className="PayPal-btn">Подписаться</button>
+              <a href="#" style={{ textDecoration: 'none' }}>
+                 <button className="PayPal-btn"><img src={PayPal} alt="PayPal" className="PayPal-img"/><span >Подписаться</span></button>
               </a>
               <p className="welcome-desc">Click to Support $2 per month (cancel anytime) <br/>Currently 750 supporters</p>
            </div>

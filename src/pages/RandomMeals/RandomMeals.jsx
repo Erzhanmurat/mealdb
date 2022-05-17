@@ -15,7 +15,7 @@ const RandomMeals = () => {
            {
               randomeMeal.map((meal) => (
                 <div className="col-3 meal" key={meal.idMeal}>
-                   <Link to={`/meal/${meal.idMeal}`}>
+                   <Link to={`/meal/${meal.idMeal}`} style={{ textDecoration: 'none' }}>
                       <img src={meal.strMealThumb} alt={meal.strMeal}/>
                       <h4 className="meal-title">{meal.strMeal}</h4>
                    </Link>

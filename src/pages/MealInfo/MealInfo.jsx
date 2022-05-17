@@ -18,9 +18,9 @@ const MealInfo = () => {
    }
    useEffect(() => {
       axios(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`)
-        .then((res) => {
-           setMeal(res.data.meals[0])
-           getIngredients(res.data.meals[0])
+        .then(({data}) => {
+           setMeal(data.meals[0])
+           getIngredients(data.meals[0])
         })
    },[])
    return (
@@ -32,7 +32,7 @@ const MealInfo = () => {
         </div>
         <div className="col-6 ms">
            <h3 className="meal-desc bold">Ingredients</h3>
-           <Link to={`/ingredients/${meal.strMeals}`}>
+           <Link to={`/ingredients/${ingredients}`} style={{ textDecoration: 'none' }}>
            <div className="row ms">
               {
                  ingredients.map((ingredient, idx) => (
@@ -44,6 +44,10 @@ const MealInfo = () => {
               }
            </div>
            </Link>
+        </div>
+        <div>
+           <h3 className="meal-desc bold">Instructions</h3>
+           <p className="instructions">{meal.strInstructions}</p>
         </div>
      </div>
    );

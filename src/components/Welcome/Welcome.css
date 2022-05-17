@@ -21,18 +21,25 @@
     color: rgba(213, 125, 31, 0.8);
 }
 .PayPal-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background: #ffc439;
-    font-weight: 600;
-    font-size: 18px;
-    padding: 8px 20px;
-    margin-top: 5px;
-    margin-bottom: 10px;
     border-radius: 5px;
     border-color: #ffc439;
+    margin: 5px auto 10px;
+    padding: 0 5px;
+}
+.PayPal-btn span {
+    font-weight: 600;
+    text-decoration: none;
 }
 .PayPal-btn:hover {
     cursor: pointer;
     background: rgba(255, 196, 57, 0.87);
+}
+.PayPal-img {
+    width: 50px;
 }
 .form-input {
     display: block;

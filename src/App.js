@@ -9,6 +9,7 @@ import BrowseNavigation from "./components/BrowseNavigation";
 import React from "react";
 
 
+
 function App() {
   return (
     <BrowserRouter>
@@ -18,7 +19,7 @@ function App() {
              <Routes>
                 <Route path="/" element={<Homepage />} />
                 <Route path="/meal/:id" element={<MealInfo />} />
-                <Route path="/ingredients/:id" element={<MealIngredients />} />
+                <Route path="/ingredients/:name" element={<MealIngredients />} />
                 <Route path="/browse/:name" element={<Browse />} />
              </Routes>
           </div>
