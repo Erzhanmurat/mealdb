@@ -120,6 +120,12 @@ img {
     text-align: center;
     padding: 0 300px;
 }
+.welcome {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    color: white;
+}
 
 
 

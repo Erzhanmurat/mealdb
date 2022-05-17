@@ -28,6 +28,9 @@
         width: 50%;
         margin: auto;
     }
+    .welcome {
+        display: block;
+    }
 }
 @media (max-width: 576px) {
     .container {
