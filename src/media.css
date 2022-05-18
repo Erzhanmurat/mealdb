@@ -1,4 +1,19 @@
 
+@media (max-width: 1200px){
+    .container {
+        max-width: 960px;
+    }
+    .search-btn {
+        right: 287px;
+    }
+    .form-input {
+        width: 32%;
+    }
+    .instructions {
+        padding: 0 150px;
+    }
+
+}
 @media (max-width: 992px) {
     .container {
         max-width: 730px;
@@ -12,6 +27,18 @@
     .col-4 {
         width: 33.333%;
         margin: auto;
+    }
+    .search-btn {
+        right: 182px;
+    }
+    .form-input {
+        width: 40%;
+    }
+    .welcome {
+        display: block;
+    }
+    .instructions {
+        padding: 0 100px;
     }
 }
 @media (max-width: 768px) {
@@ -30,6 +57,15 @@
     }
     .welcome {
         display: block;
+    }
+    .search-btn {
+        right: 111px;
+    }
+    .form-input {
+        width: 45%;
+    }
+    .instructions {
+        padding: 0;
     }
 }
 @media (max-width: 576px) {
@@ -57,5 +93,14 @@
     }
     .player {
         margin-top: 30px;
+    }
+    .search-btn {
+        right: 111px;
+    }
+    .form-input {
+        width: 45%;
+    }
+    .instructions {
+        padding: 0;
     }
 }

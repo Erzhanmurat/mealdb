@@ -126,6 +126,28 @@ img {
     text-align: center;
     color: white;
 }
+.search-btn {
+    position: absolute;
+    right: 380px;
+    top: 0;
+    font-size: 26px;
+    cursor: pointer;
+    color: #282727;
+}
+.form-input {
+    display: block;
+    width: 25%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.428571429;
+    color: #555;
+    vertical-align: middle;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
 
 
 

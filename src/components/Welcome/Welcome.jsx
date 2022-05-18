@@ -1,6 +1,8 @@
 import React from 'react';
-import './Welcome.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
 import PayPal from '../../assets/images/PayPal.png'
+import './Welcome.css'
 
 const Welcome = () => {
    return (
@@ -24,7 +26,17 @@ const Welcome = () => {
            <img src="https://www.themealdb.com/images/separator.jpg" alt="line" className="welcome-line"/>
            <div className="form">
               <input type="text" placeholder="Search for a Meal..." className="form-input"/>
-              <button><span></span></button>
+              <button className="search-btn">
+                 <FontAwesomeIcon icon={faMagnifyingGlass}/>
+              </button>
+              <div className="total-info">
+                 <img src="https://www.themealdb.com/images/icons/meal-icon6.png" alt=""/>
+                  <p className="total-info--title">Total Meals: <span>283</span></p>
+                 <img src="https://www.themealdb.com/images/icons/meal-icon4.png" alt=""/>
+                 <p className="total-info--title">Total Ingredients: <span>574</span></p>
+                 <img src="https://www.themealdb.com/images/icons/image2.png" alt=""/>
+                 <p className="total-info--title">Images: <span>283</span></p>
+              </div>
            </div>
            <img src="https://www.themealdb.com/images/separator.jpg" alt="line" className="welcome-line"/>
         </div>
