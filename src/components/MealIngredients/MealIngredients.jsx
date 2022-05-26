@@ -1,28 +1,43 @@
 import React, {useEffect, useState} from 'react';
 import axios from "axios";
-import { useParams} from "react-router-dom";
+import {Link, useParams} from "react-router-dom";
+
 
 const MealIngredients = () => {
-   const [ingredients, setIngredients] = useState({})
-   const {name} = useParams()
-   /*const getIngredients = (meal) => {
-      let result = []
-      for (let i = 0; i < 20; i++) {
-         if (meal[`strIngredient${i + 1}`]) {
-            result = [...result, meal[`strIngredient${i + 1}`]]
-         }
-         setIngredients(result)
-      }
-   }*/
+   const [ingredients,setIngredients] = useState({})
+   const {slug} = useParams()
    useEffect(() => {
-      axios(`https://www.themealdb.com/api/json/v1/1/filter.php?i=${ingredients}`)
-        .then(({data}) => setIngredients(data.meals[0]))
-   })
+      axios(`https://www.themealdb.com/api/json/v2/1/filter.php?i=${slug}`)
+        .then((res) => setIngredients(res.data))
+   },[slug])
+   if (!ingredients.meals){
+      return "Loading..."
+   }
    return (
-    <div>
-
-    </div>
-   );
+     <div className="container">
+        <div className="row">
+           <div  className="col-4">
+              <h2 className="meal-title">{slug}</h2>
+              <img src={`https://www.themealdb.com/images/ingredients/${slug}.png`} alt=""/>
+           </div>
+           <div className="col-6">
+              <h2 className="meal-title">Meals</h2>
+              <div className="row">
+                 {
+                    ingredients.meals.map((ingredient,idx) => (
+                      <div className="col-4 meal" key={idx}>
+                         <Link style={{textDecoration: 'none',color:'white'}} to={`/meal/${ingredient.idMeal}`} key={idx}>
+                            <img src={`${ingredient.strMealThumb}`} alt=""/>
+                            <h4 className="meal-title">{ingredient.strMeal}</h4>
+                         </Link>
+                      </div>
+                    ))
+                 }
+              </div>
+           </div>
+        </div>
+     </div>
+   )
 };
 
 export default MealIngredients;

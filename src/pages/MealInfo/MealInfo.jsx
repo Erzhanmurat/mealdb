@@ -22,7 +22,7 @@ const MealInfo = () => {
            setMeal(data.meals[0])
            getIngredients(data.meals[0])
         })
-   },[])
+   },[id])
    return (
      <div className="row">
         <div className="col-4">
@@ -32,18 +32,18 @@ const MealInfo = () => {
         </div>
         <div className="col-6 ms">
            <h3 className="meal-desc bold">Ingredients</h3>
-           <Link to={`/ingredients/${ingredients}`} style={{ textDecoration: 'none' }}>
            <div className="row ms">
               {
                  ingredients.map((ingredient, idx) => (
-                      <div className="col-4" key={idx}>
+                      <div className="col-4 meal" key={idx}>
+                         <Link to={`/ingredients/${ingredient}`} style={{ textDecoration: 'none' }}>
                          <img src={`https://www.themealdb.com/images/ingredients/${ingredient}.png`} alt=""/>
                          <h4 className="meal-title">{ingredient}</h4>
+                         </Link>
                       </div>
                  ))
               }
            </div>
-           </Link>
         </div>
         <div>
            <h3 className="meal-desc bold">Instructions</h3>

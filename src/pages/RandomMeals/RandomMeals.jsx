@@ -3,7 +3,7 @@ import axios from "axios";
 import {Link} from "react-router-dom";
 
 const RandomMeals = () => {
-   const [randomeMeal, setRandomMeal] = useState([])
+   const [randomMeal, setRandomMeal] = useState([])
    useEffect(() => {
       axios('https://www.themealdb.com/api/json/v2/1/randomselection.php')
         .then((res) => setRandomMeal(res.data.meals))
@@ -13,7 +13,7 @@ const RandomMeals = () => {
         <h3 className="meal-desc">RandomMeal</h3>
         <div className="row">
            {
-              randomeMeal.map((meal) => (
+              randomMeal.map((meal) => (
                 <div className="col-3 meal" key={meal.idMeal}>
                    <Link to={`/meal/${meal.idMeal}`} style={{ textDecoration: 'none' }}>
                       <img src={meal.strMealThumb} alt={meal.strMeal}/>
